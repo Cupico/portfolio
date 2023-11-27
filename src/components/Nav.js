@@ -2,7 +2,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { HiOutlinePhone } from "react-icons/hi";
 import { FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const navItems = [
@@ -46,7 +46,7 @@ const Nav = ({ open, setNavOpen }) => {
     setNavOpen(false);
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     let getItems = [...activeNavItem];
 
     const scrollActiveItem = (id) => {
@@ -67,7 +67,7 @@ const Nav = ({ open, setNavOpen }) => {
     if (projets <= scrollPosition) scrollActiveItem("Projets");
     if (about <= scrollPosition) scrollActiveItem("About");
     if (contact <= scrollPosition) scrollActiveItem("Contact");
-  };
+  }, [activeNavItem]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -77,8 +77,10 @@ const Nav = ({ open, setNavOpen }) => {
       window.removeEventListener("scroll", () => {
         handleScroll();
       });
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div className="">
