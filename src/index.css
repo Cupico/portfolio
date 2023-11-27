@@ -18,8 +18,15 @@ code {
     monospace;
 }
 
-/* Photo David Accueil */
 
+.clip-triangle {
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 20%;
+
+}
+
+@media screen and (min-width: 800px) {
+ 
 .clip-triangle {
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
@@ -37,6 +44,10 @@ code {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+
+}
+
+/* Photo David Accueil */
 
 /* CURSOR */
 
