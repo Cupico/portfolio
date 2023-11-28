@@ -7,11 +7,13 @@ import Contact from "./Home/Contact";
 import { useRef } from "react";
 import { useIsVisible } from "../components/Detect";
 
+import { useMouse } from "../components/useMouse";
 
 const Home = () => {
   const name = useRef();
   const nameVisible = useIsVisible(name);
 
+  useMouse();
 
   return (
     <main>

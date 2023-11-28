@@ -5,7 +5,7 @@ export function useMouse() {
   useEffect(() => {
     const mouseEffect = (e) => {
       const cursor = document.getElementById("cursor-bg");
-      //   cursor.style.display = "block";
+        cursor.style.display = "block";
       cursor.animate(
         {
           top: e.pageY + "px",
