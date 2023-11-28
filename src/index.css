@@ -26,6 +26,18 @@ code {
 }
 
 @media screen and (min-width: 800px) {
+
+  /* CURSOR */
+
+#cursor-bg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: skyblue;
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
  
 .clip-triangle {
   animation: morph 8s ease-in-out infinite;
@@ -48,17 +60,6 @@ code {
 }
 
 /* Photo David Accueil */
-
-/* CURSOR */
-
-#cursor-bg {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-color: skyblue;
-  border-radius: 50%;
-  filter: blur(150px);
-}
 
 .response {
   animation-name: colorChange;
