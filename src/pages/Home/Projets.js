@@ -13,6 +13,9 @@ const Projets = () => {
   const evaengines = useRef();
   const evaenginesVisible = useIsVisible(evaengines);
 
+  const rap = useRef();
+  const rapVisible = useIsVisible(rap);
+
   return (
     <section id="Projets" className="w-full h-full">
       <div className="p-10 sm:p-20">
@@ -76,7 +79,7 @@ const Projets = () => {
         </div>
 
         {/* Projet 3*/}
-        <div ref={evaengines} className="h-full w-full mb-6 sm:mb-0">
+        <div ref={evaengines} className="h-full w-full mb-20 sm:mb-20 lg:mb-28">
           <FadeAnimation
             afterAnimation={"translate-x-0"}
             beforeAnimation={"-translate-x-10"}
@@ -93,6 +96,33 @@ const Projets = () => {
               description1={`Conception et développement de la partie front-end d’un outil interne avec ReactJS basé sur l'IA et la reconnaissance faciale afin de faciliter le recrutement de mannequins.`}
               description2={`Implémentation d'une interface utilisateur conviviale offrant une expérience intuitive pour rechercher et filtrer des profils en fonction de critères spécifiques.`}
               href={"https://www.instagram.com/eva_engines/?hl=fr"}
+            />
+          </FadeAnimation>
+        </div>
+
+
+
+        <div
+          ref={rap}
+          className="h-full w-full mb-6 sm:mb-0 mb-20 sm:mb-20 lg:mb-28"
+        >
+          <FadeAnimation
+            afterAnimation={"translate-x-0"}
+            beforeAnimation={"translate-x-10"}
+            visible={rapVisible}
+          >
+            <ProjetCard
+              order_img={"lg:order-2"}
+              order_text={"lg:order-1"}
+              inverse_responsive={true}
+              img_path={"rap.png"}
+              job={"Projet personnel"}
+              company={"David Elbar"}
+              date={""}
+              description1={`Les données, ont été récupérées en allant scrapper les pages de spotify pour récupérer les auditeurs mensuels, et en intéragissant avec l'api rap genius pour les images, noms et description des artistes.`}
+              description2={`Application réalisé en React & Node, permettant de rechercher des rappeurs français pour accéder à leur informations, ainsi qu'un jeu mis en place en fonction de leur auditeurs.  `}
+              href={"https://rap-cli-55f5382404b2.herokuapp.com/"}
+              
             />
           </FadeAnimation>
         </div>
