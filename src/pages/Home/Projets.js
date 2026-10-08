@@ -4,6 +4,10 @@ import ProjetCard from "./Projets/projetCard";
 import FadeAnimation from "../../components/FadeAnimation";
 
 const Projets = () => {
+
+  const rap = useRef();
+  const rapVisible = useIsVisible(rap);
+
   const welease = useRef();
   const weleaseVisible = useIsVisible(welease);
 
@@ -13,8 +17,6 @@ const Projets = () => {
   const evaengines = useRef();
   const evaenginesVisible = useIsVisible(evaengines);
 
-  const rap = useRef();
-  const rapVisible = useIsVisible(rap);
 
   return (
     <section id="Projets" className="w-full h-full">
@@ -25,6 +27,42 @@ const Projets = () => {
         </div>
 
         {/* Projet 1*/}
+
+        <div
+          ref={rap}
+          className="mt-10 sm:mt-16 h-full w-full mb-20 sm:mb-20 lg:mb-28"
+        >
+          <FadeAnimation
+            afterAnimation={"translate-x-0"}
+            beforeAnimation={"translate-x-10"}
+            visible={rapVisible}
+          >
+            <ProjetCard
+              order_img={"lg:order-2"}
+              order_text={"lg:order-1"}
+              inverse_responsive={true}
+              img_path={"eveasoft.png"}
+              job={"Développeur full stack"}
+              company={"Eveasoft"}
+              date={"Janvier 2024 - Février 2026, CDI"}
+              description3={
+                `(Le site web présent est juste le site vitrine de mon ancienne entreprise Eveasoft. L'accès a la plateforme Multani, sur laquelle j'ai travaillé, est réservé aux clients de l'entreprise).`
+              }
+              description1={
+                `Participation au développement backend et frontend de la
+                plateforme Multani, solution de gestion des autorisations et
+                déclarations de travaux DT/DICT (VueJS, NestJS, MongoDB)`
+              }
+              description2={`Conception et développement en autonomie d'un module
+              pour la SNCF, sur la plateforme, permettant la gestion des
+              demandes de projets concernant des biens immobiliers
+              appartenant à la SNCF.`}
+              href={"https://eveasoft.com/"}
+              
+            />
+          </FadeAnimation>
+        </div>
+
         <div
           ref={welease}
           className="mt-10 sm:mt-16 h-full w-full mb-20 sm:mb-20 lg:mb-28"
@@ -100,32 +138,6 @@ const Projets = () => {
           </FadeAnimation>
         </div>
 
-
-
-        <div
-          ref={rap}
-          className="h-full w-full mb-6 sm:mb-0 mb-20 sm:mb-20 lg:mb-28"
-        >
-          <FadeAnimation
-            afterAnimation={"translate-x-0"}
-            beforeAnimation={"translate-x-10"}
-            visible={rapVisible}
-          >
-            <ProjetCard
-              order_img={"lg:order-2"}
-              order_text={"lg:order-1"}
-              inverse_responsive={true}
-              img_path={"rap.png"}
-              job={"Projet personnel"}
-              company={"David Elbar"}
-              date={""}
-              description1={`Les données, ont été récupérées en allant scrapper les pages de spotify pour récupérer les auditeurs mensuels, et en intéragissant avec l'api rap genius pour les images, noms et description des artistes.`}
-              description2={`Application réalisé en React & Node, permettant de rechercher des rappeurs français pour accéder à leur informations, ainsi qu'un jeu mis en place en fonction de leur auditeurs.  `}
-              href={"https://rap-cli-55f5382404b2.herokuapp.com/"}
-              
-            />
-          </FadeAnimation>
-        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import { stack } from "../utils/techStackLogo";
 
 import Projets from "./Home/Projets";
 import About from "./Home/About";
-import Contact from "./Home/Contact";
+// import Contact from "./Home/Contact";
 
 import { useRef } from "react";
 import { useIsVisible } from "../components/Detect";
@@ -47,8 +47,8 @@ const Home = () => {
                   <span className="uppercase text-xl font-bold text-blue-500">
                     David Elbar
                   </span>
-                  , je suis développeur full stack. J'ai 24 ans et me situe à
-                  Courbevoie, France.{" "}
+                  , je suis développeur full stack. J'ai 27 ans et me situe à
+                  Lyon, France.{" "}
                 </h2>
 
                 {/* Tech stack */}
@@ -106,7 +106,8 @@ const Home = () => {
       </div>
       <Projets />
       <About />
-      <Contact />
+      <div className="h-96 w-100"></div>
+      {/* <Contact /> */}
     </main>
   );
 };

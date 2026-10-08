@@ -21,11 +21,11 @@ const navItems = [
     id: "About",
     active: false,
   },
-  {
-    name: "Contact",
-    id: "Contact",
-    active: false,
-  },
+  // {
+  //   name: "Contact",
+  //   id: "Contact",
+  //   active: false,
+  // },
 ];
 
 const Nav = ({ open, setNavOpen }) => {
@@ -61,12 +61,12 @@ const Nav = ({ open, setNavOpen }) => {
     const accueil = document.getElementById("Accueil").offsetTop * 0.85;
     const projets = document.getElementById("Projets").offsetTop * 0.85;
     const about = document.getElementById("About").offsetTop * 0.85;
-    const contact = document.getElementById("Contact").offsetTop * 0.85;
+    // const contact = document.getElementById("Contact").offsetTop * 0.85;
 
     if (accueil <= scrollPosition) scrollActiveItem("Accueil");
     if (projets <= scrollPosition) scrollActiveItem("Projets");
     if (about <= scrollPosition) scrollActiveItem("About");
-    if (contact <= scrollPosition) scrollActiveItem("Contact");
+    // if (contact <= scrollPosition) scrollActiveItem("Contact");
   }, [activeNavItem]);
 
   useEffect(() => {

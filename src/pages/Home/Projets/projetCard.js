@@ -8,6 +8,7 @@ const ProjetCard = ({
   date,
   description1,
   description2,
+  description3,
   href
 }) => {
   return (
@@ -49,6 +50,7 @@ const ProjetCard = ({
               <p className="">{description1}</p>
               <br />
               <p>{description2}</p>
+              {!!description3 && (<><br/><p>{description3}</p></>)}
             </div>
           </div>
         </div>

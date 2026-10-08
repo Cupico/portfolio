@@ -79,7 +79,7 @@ const About = () => {
                 <span className="text-blue-500 font-bold">
                   stages et d'années d'alternances
                 </span>
-                , toutes réalisées au sein de start-ups innovantes.
+                , toutes réalisées au sein de start-ups.
               </p>
               <p>
                 Lorsque je ne suis pas sur mon ordinateur, je cultive ma passion
